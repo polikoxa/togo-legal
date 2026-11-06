@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ToGo Privacy Policy</title>
+  <meta name="description" content="Privacy policy for the ToGo mobile application. Publisher: Dmytro Poliakov.">
+  <link rel="canonical" href="https://polikoxa.github.io/togo-legal/privacy/">
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      line-height: 1.3;
+      margin: 1.75rem 0 0.5rem;
+    }
+    p, li { font-size: 1rem; }
+    .date { margin-top: 0; }
+    a { color: #0b3d91; }
+    code { font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>ToGo Privacy Policy</h1>
+    <p class="date"><strong>6 November 2026</strong></p>
+
+    <p>This policy describes the ToGo mobile application for iOS and Android (the “App”) as it works on this date. ToGo lists cultural and entertainment events. When you choose a ticket or an organizer link, the App opens that page outside ToGo. The App does not sell tickets.</p>
+
+    <p>The publisher is Dmytro Poliakov, an individual. Privacy contact: <a href="mailto:togo.support@gmail.com">togo.support@gmail.com</a></p>
+
+    <h2>What this version does not collect</h2>
+
+    <p>This version of the App does not ask for your name, email address, phone number, or a password. It does not create an account. It does not use advertising identifiers, tracking across other companies’ apps and websites, analytics software, or crash-reporting software. It does not set cookies. It does not read your contacts, photos, microphone, or camera.</p>
+
+    <p>The age filter filters events. It is not a record of your age.</p>
+
+    <p>The database behind the API has tables prepared for accounts, favorites, and notification subscriptions. This version of the App does not call them. A read-only check on 6 November 2026 found no rows in <code>users</code>, <code>auth.users</code>, <code>favorites</code>, <code>notification_subscriptions</code>, or <code>notifications</code>.</p>
+
+    <h2>Information that stays on your phone</h2>
+
+    <p>The App stores the following on the phone and does not send these items to the ToGo server:</p>
+    <ul>
+      <li>the interface language you choose;</li>
+      <li>the date format you choose. Until you choose one, the App uses the order already set on the phone;</li>
+      <li>the identifiers of events you mark in the in-app notification list. The App does not register the phone for push notifications and does not send these identifiers to a server;</li>
+      <li>a category selection may be written on the phone when you change categories. Each time you open the App, the home screen starts without that filter applied.</li>
+    </ul>
+
+    <p>Favorites stay in memory for the current visit. They are not written to disk and are not sent to a server. They end when the App process ends.</p>
+
+    <p>The city, country, or worldwide list you pick for this visit is also kept only for that visit.</p>
+
+    <p>You can change the language and the date format in Settings, and you can remove an event from the in-app notification list. Deleting the App removes the items stored only on the phone. You can turn off location permission in the phone’s settings.</p>
+
+    <h2>Location</h2>
+
+    <p>The App works without your location. You can choose a city, a country, or the worldwide list yourself.</p>
+
+    <p>If you tap the control that asks for your current place, the App asks the operating system for permission to use location while the App is in use. If you allow it, the App reads your coordinates for that request and sends them to the public Nominatim service at <code>nominatim.openstreetmap.org</code>, operated for OpenStreetMap. The request asks that service for a place name. The App then matches the name to a city in its own list. The coordinates are not sent to the ToGo server.</p>
+
+    <p>The request identifies the App as <code>ToGo/1.0 (cultural events aggregator)</code>. It is sent only when you ask for the current place. It is not an autocomplete search and it is not a scheduled scan.</p>
+
+    <p>The place name comes from OpenStreetMap data, © OpenStreetMap contributors, made available under the Open Database License. The city control in the App does not itself display that credit. Nominatim’s own usage policy and the OpenStreetMap Foundation privacy policy apply to that request: <a href="https://operations.osmfoundation.org/policies/nominatim/">Nominatim usage policy</a> and <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation privacy policy</a>.</p>
+
+    <p>If you refuse location, or if the lookup fails, the App tells you and leaves the current selection as it is. You can still choose a city by hand.</p>
+
+    <h2>Requests to the ToGo API</h2>
+
+    <p>To show events, films, museums, and cities, the App calls the ToGo API over HTTPS. A request can include the filters you are using: search text, city, country, category, place, date, time, age group, and genre. The App does not attach an account or its own device identifier to these requests.</p>
+
+    <p>The API is hosted on Railway. The application code does not write these requests into a user profile or a user database.</p>
+
+    <p>Railway’s public documentation of HTTP logs lists the client IP address, user agent, method, path, and host among the fields it stores. That documentation was read on 6 November 2026. It does not list the query string as its own field. This policy therefore does not state that search text is kept in those HTTP logs. Railway’s published retention depends on the hosting plan. The ToGo application does not set that period, and this project’s plan is not recorded in the application. This policy does not state a number of days. A production log was not opened for this policy.</p>
+
+    <p>The API process does not contain its own store of privacy requests. Whether a process log on the server keeps a copy of the query string was not confirmed from a production log.</p>
+
+    <h2>Posters, maps, and tickets</h2>
+
+    <p>The phone loads a poster from the address stored for that event. The address may be on ToGo’s image storage (Supabase) or on the site of an organizer, a cinema, a museum, a ticket seller, or Wikimedia. The phone requests the image directly. That site sees a normal network request, including the network address and a user agent that identifies ToGo. The App does not send the site your name or an account.</p>
+
+    <p>Some of those requests use the technical label <code>support@togo.app</code>. That label is not the address for privacy requests. Privacy requests go to <a href="mailto:togo.support@gmail.com">togo.support@gmail.com</a>.</p>
+
+    <p>If you open a place in maps, the App hands the place name or address to Google Maps or to another maps application on the phone. It does not attach your coordinates to that handoff.</p>
+
+    <p>If you tap a ticket or an organizer link, the phone opens that page in the browser or in another app. Any payment happens on that other site under its own terms. ToGo does not receive your payment card or the purchase.</p>
+
+    <h2>How the information is used</h2>
+
+    <p>The information above is used to show the event list, apply the filters you chose, resolve a city when you ask for your current place, open a map or a ticket page when you tap one, and keep the language, date format, and in-app notification list on your phone.</p>
+
+    <p>It is not used for advertising and it is not sold.</p>
+
+    <h2>How long it is kept</h2>
+
+    <p>Language, date format, category selection, and the in-app notification list remain on the phone until you change them or delete the App. Favorites and the place you picked for this visit are not kept after the App process ends.</p>
+
+    <p>Coordinates sent to Nominatim are not stored by ToGo. What Nominatim keeps is described in the OpenStreetMap Foundation privacy policy, not in this one.</p>
+
+    <p>The ToGo application does not keep a profile of you. It does not set the retention period for logs kept by Railway or by the sites that serve posters.</p>
+
+    <h2>Asking about your information</h2>
+
+    <p>There is no account to delete in the App. Deleting the App removes what is stored only on the phone. Turning off location permission stops new location requests.</p>
+
+    <p>To ask what this policy covers, or to ask for access, correction, or deletion of information the publisher holds, write to <a href="mailto:togo.support@gmail.com">togo.support@gmail.com</a>. There is no profile to send back. A request about a particular API call can be answered only to the extent a log still exists and can be found. This policy does not promise that a hosting log can be deleted before the host’s own retention ends, because that was not confirmed.</p>
+
+    <p>If the law where you live gives you rights over personal information, including the right to object or to complain to a supervisory authority, you may use the same email. Those rights depend on that law and on whether it applies to this App. This policy does not name a country of establishment or a postal address, because none was used to prepare it. It does not appoint a representative in the European Union or the United Kingdom.</p>
+
+    <h2>Children</h2>
+
+    <p>The App lists events, including events for families. It does not ask children to create an account or to send contact details. The publisher does not knowingly collect personal information from children.</p>
+
+    <h2>Changes</h2>
+
+    <p>If this policy changes, the new text will carry a new date and will replace this one at the public address where it is posted. The copy inside the App should point at that address.</p>
+
+    <h2>Contact</h2>
+
+    <p>Dmytro Poliakov<br>
+    <a href="mailto:togo.support@gmail.com">togo.support@gmail.com</a></p>
+  </main>
+</body>
+</html>
